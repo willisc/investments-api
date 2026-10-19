@@ -1,3 +1,17 @@
+app.get("/", (req, res) => {
+
+    res.send(`
+        <h1>Investments API</h1>
+        <p>API is running.</p>
+
+        <ul>
+            <li><a href="/api/health">Health</a></li>
+            <li><a href="/api/dashboard">Dashboard</a></li>
+        </ul>
+    `);
+
+});
+
 const express = require('express');
 
 const app = express();
