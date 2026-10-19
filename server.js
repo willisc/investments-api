@@ -25,19 +25,40 @@ app.get('/api/health', (req, res) => {
 
 });
 
-app.get('/api/dashboard', (req, res) => {
+app.get("/api/dashboard", (req, res) => {
 
     res.json({
+
+        timestamp: new Date(),
+
         stocks: [
+
             {
                 symbol: "BHP",
+                name: "BHP Group",
                 price: 45.50,
-                daily: 1.2
+                daily: 1.20
             },
+
             {
                 symbol: "CBA",
+                name: "Commonwealth Bank",
                 price: 118.20,
-                daily: -0.4
+                daily: -0.40
+            },
+
+            {
+                symbol: "FMG",
+                name: "Fortescue",
+                price: 25.60,
+                daily: 2.15
+            },
+
+            {
+                symbol: "RIO",
+                name: "Rio Tinto",
+                price: 125.40,
+                daily: 1.85
             }
         ]
     });
